@@ -1,0 +1,122 @@
+
+// ---Text---
+
+$pale-violet: hsl(276, 100%, 81%); // sub-heading at the top of the app UI
+$moderate-violet: hsl(276, 55%, 52%); // chat on the left
+$desaturated-dark-violet: hsl(271, 15%, 43%); // chat on the right
+$grayish-blue: hsl(206, 6%, 79%); // placeholder text
+$very-dark-desaturated-violet: hsl(271, 36%, 24%); // main heading
+$dark-grayish-violet: hsl(270, 7%, 64%); // paragraph
+
+
+// ---Gradients---
+
+$gradient-light-magenta: hsl(293, 100%, 63%);
+$gradient-light-violet: hsl(264, 100%, 61%);
+
+// ---Secondary---
+
+$white: hsl(0, 0%, 100%);
+$light-grayish-violet: hsl(270, 20%, 96%); // app background
+$very-dark-desaturated-violet: hsl(271, 36%, 24%); // submit button background
+$very-light-magenta: hsl(289, 100%, 72%); // radio button outline
+
+// Mixins
+@mixin responsive($breakpoint) {
+    @if $breakpoint == tab-port {
+        @media only screen and (min-width: 37.5em) {@content};
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (min-width: 56.25em) {@content};
+    }
+    @if $breakpoint == desktop {
+        @media only screen and (min-width: 75em) {@content};
+    }
+    @if $breakpoint == lg-desktop {
+        @media only screen and (min-width: 112.5em) {@content};
+    }
+}
+
+// Animations
+
+@keyframes LeftBgMoveIn {
+    0% {
+        transform: translate(-5rem, -5rem) translateY(-100%);
+    }
+
+    100% {
+        transform: translate(-5rem, -5rem) translateY(0);
+    }
+}
+
+@keyframes RightBgMoveIn {
+    0% {
+        transform: translate(10rem, -20rem) translateY(100%);
+    }
+
+    100% {
+        transform: translate(10rem, -20rem) translateY(0);
+    }
+}
+
+@include responsive(tab-land) {
+    @keyframes RightBgMoveIn {
+        0% {
+            transform: translate(10rem, 10rem) translateY(100%);
+        }
+
+        100% {
+            transform: translate(10rem, 10rem);
+        }
+    }
+}
+
+@keyframes mobile {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes heading {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes color {
+    0% {
+        opacity: 0;
+        background: linear-gradient(to right, $gradient-light-magenta, $gradient-light-violet);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    100% {
+        opacity: 1;
+        background: linear-gradient(to right, $gradient-light-violet, $gradient-light-magenta);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

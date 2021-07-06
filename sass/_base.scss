@@ -1,0 +1,126 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 55%;
+    @include responsive(tab-land) {
+        font-size: 60%;
+    }
+    @include responsive(desktop) {
+        font-size: 65%;
+    }
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    //Weights: 400, 500, 700
+    display: grid;
+    grid-template: 15vh 70vh 15vh 35vh/ repeat(2, 1fr);
+    height: 100vh;
+    overflow-x: hidden;
+    @include responsive(tab-land) {
+        grid-template: 10vh 80vh 10vh / repeat(2, 1fr) repeat(2, 1.1fr);
+        min-height: 100vh;
+        height: auto;
+        overflow: hidden;
+    }
+}
+
+::selection {
+    background: $gradient-light-magenta;
+    color: $very-dark-desaturated-violet;
+}
+
+// ---Typography---
+.margin-bottom-1 {
+    margin-bottom: 1rem;
+}
+
+.margin-bottom-2 {
+    margin-bottom: 2rem;
+}
+
+.margin-bottom-3 {
+    margin-bottom: 3rem;
+}
+
+.margin-bottom-4 {
+    margin-bottom: 3rem;
+}
+
+.margin-bottom-6 {
+    margin-bottom: 6rem;
+}
+
+.intro {
+    &__content {
+        &-heading {
+            color: $very-dark-desaturated-violet;
+            font-size: 4rem;
+            letter-spacing: 2px;
+            line-height: 1.2;
+        }
+
+        &-para {
+            color: $dark-grayish-violet;
+            font-size: 2rem;
+        }
+    }
+}
+
+.footer {
+    .placeholder {
+        color: $grayish-blue;
+        font-size: 1.3rem;
+    }
+}
+
+.user {
+    &__info {
+        .name {
+            font-weight: 700;
+            color: #e9cbfd;
+        }
+
+        .status {
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.msg {
+    width: 65%;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    line-height: 1.2;
+
+    &-left {
+        border-radius: 1.5rem 1.5rem 1.5rem 0.8rem;
+        background: hsl(276, 62.5%, 93.7%);
+        color: $moderate-violet;
+    }
+
+    &-right {
+        border-radius: 1.5rem 1.5rem 0.8rem 1.5rem;
+        background: #fff;
+        color: $desaturated-dark-violet;
+        box-shadow: 1px 6px 1.5rem rgba(0,0,0,0.2);
+    }
+}
+
+.package {
+    font-size: 1.2rem;
+    padding: 1rem;
+    background: linear-gradient(to right, $gradient-light-magenta, $gradient-light-violet);
+    color: #eea3ff;
+}
