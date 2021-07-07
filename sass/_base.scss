@@ -23,9 +23,10 @@ body {
     font-size: 1.6rem;
     line-height: 1.4;
     display: grid;
-    grid-template: 15vh 80rem 15vh 35vh/ repeat(2, 1fr);
+    grid-template: 10vh 80rem 10vh 35vh/ repeat(2, 1fr);
     @include responsive(tab-land) {
-        grid-template: 10vh 70rem 10vh / repeat(2, 1fr) repeat(2, 1.1fr);
+        min-height: 100vh;
+        grid-template: 1fr 70rem 1fr / repeat(2, 1fr) repeat(2, 1.1fr);
         overflow: hidden;
     }
     position: relative;
