@@ -39,84 +39,84 @@ $very-light-magenta: hsl(289, 100%, 72%); // radio button outline
 
 // Animations
 
-// @keyframes LeftBgMoveIn {
-//     0% {
-//         transform: translate(-5rem, -5rem) translateY(-100%);
-//     }
-//
-//     100% {
-//         transform: translate(-5rem, -5rem) translateY(0);
-//     }
-// }
-//
-// @keyframes RightBgMoveIn {
-//     0% {
-//         transform: translate(10rem, 0) translateY(100%);
-//     }
-//
-//     100% {
-//         transform: translate(10rem, 0) translateY(0);
-//     }
-// }
-//
-// @include responsive(tab-land) {
-//     @keyframes RightBgMoveIn {
-//         0% {
-//             transform: translate(10rem, 10rem) translateY(100%);
-//         }
-//
-//         100% {
-//             transform: translate(10rem, 10rem);
-//         }
-//     }
-// }
-//
-// @keyframes mobile {
-//     0% {
-//         opacity: 0;
-//         transform: translateX(-100%);
-//     }
-//
-//     100% {
-//         opacity: 1;
-//         transform: translateX(0);
-//     }
-// }
-//
-// @keyframes heading {
-//     0% {
-//         transform: translateX(0);
-//     }
-//
-//     100% {
-//         transform: translateX(100%);
-//     }
-// }
-//
-// @keyframes color {
-//     0% {
-//         opacity: 0;
-//         background: linear-gradient(to right, $gradient-light-magenta, $gradient-light-violet);
-//         -webkit-background-clip: text;
-//         color: transparent;
-//     }
-//
-//     100% {
-//         opacity: 1;
-//         background: linear-gradient(to right, $gradient-light-violet, $gradient-light-magenta);
-//         -webkit-background-clip: text;
-//         color: transparent;
-//     }
-// }
-//
-// @keyframes appear {
-//     0% {
-//         opacity: 0;
-//         transform: translateY(1rem);
-//     }
-//
-//     100% {
-//         opacity: 1;
-//         transform: translateY(0);
-//     }
-// }
+@keyframes LeftBgMoveIn {
+    0% {
+        transform: translate(-5rem, -5rem) translateY(-100%);
+    }
+
+    100% {
+        transform: translate(-5rem, -5rem) translateY(0);
+    }
+}
+
+@keyframes RightBgMoveIn {
+    0% {
+        transform: translate(10rem, 0) translateY(100%);
+    }
+
+    100% {
+        transform: translate(10rem, 0) translateY(0);
+    }
+}
+
+@include responsive(tab-land) {
+    @keyframes RightBgMoveIn {
+        0% {
+            transform: translate(10rem, 10rem) translateY(100%);
+        }
+
+        100% {
+            transform: translate(10rem, 10rem);
+        }
+    }
+}
+
+@keyframes mobile {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes heading {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes color {
+    0% {
+        opacity: 0;
+        background: linear-gradient(to right, $gradient-light-magenta, $gradient-light-violet);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    100% {
+        opacity: 1;
+        background: linear-gradient(to right, $gradient-light-violet, $gradient-light-magenta);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
