@@ -51,11 +51,11 @@ $very-light-magenta: hsl(289, 100%, 72%); // radio button outline
 
 @keyframes RightBgMoveIn {
     0% {
-        transform: translate(10rem, -20rem) translateY(100%);
+        transform: translate(10rem, 0) translateY(100%);
     }
 
     100% {
-        transform: translate(10rem, -20rem) translateY(0);
+        transform: translate(10rem, 0) translateY(0);
     }
 }
 

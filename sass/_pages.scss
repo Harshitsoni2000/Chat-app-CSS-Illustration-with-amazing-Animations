@@ -12,19 +12,32 @@
 }
 
 .background-right {
-    grid-area: 3 / 2 / 5 / 3;
-    background: $light-grayish-violet;
-    border-radius: 50rem 50rem 0 0;
-    position: relative;
-    height: 150%;
-    transform: translate(10rem, -20rem);
-    @include responsive(tab-land) {
-        z-index: 2;
-        grid-area: 1 / 4 / -1 / 5;
+    grid-area: 2 / 2 / 5 / 3;
+    overflow: hidden;
+    .bg-right {
+        background: $light-grayish-violet;
         height: 100%;
-        transform: translate(10rem, 10rem);
+        width: 100%;
+        border-radius: 50rem 50rem 0 0;
+        animation: RightBgMoveIn 1s;
     }
-    animation: RightBgMoveIn 1s;
+    @media only screen and (max-width: 56.25rem) {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+
+        .bg-right {
+            grid-row: 2 / 3;
+            transform: translate(10rem, 0);
+        }
+    }
+    @include responsive(tab-land) {
+        grid-area: 1 / 4 / -1 / 5;
+        z-index: 2;
+        .bg-right {
+            z-index: 2;
+            transform: translate(10rem, 10rem);
+        }
+    }
 }
 
 .ui-device {
@@ -129,7 +142,7 @@
                 .package {
                     width: 75%;
                     border-radius: 1.5rem 1.5rem 1.5rem 0.8rem;
-                    margin-bottom: 1rem;
+                    margin-bottom: 0.8rem;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
@@ -178,7 +191,7 @@
 
                 &__bottom {
                     display: grid;
-                    align-items: end;
+                    align-items: bottom;
                 }
 
                 &__middle {
@@ -189,6 +202,7 @@
                     .images {
                         display: flex;
                         align-items: center;
+                        margin-bottom: 0.8rem;
 
                         & > * {
                             height: 6rem;
