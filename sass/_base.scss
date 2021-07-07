@@ -23,9 +23,9 @@ body {
     font-size: 1.6rem;
     line-height: 1.4;
     display: grid;
-    grid-template: 15vh minmax(80rem, 1fr) 15vh 35vh/ repeat(2, 1fr);
+    grid-template: 15vh 80rem 15vh 35vh/ repeat(2, 1fr);
     @include responsive(tab-land) {
-        grid-template: 10vh minmax(80rem, 1fr) 10vh / repeat(2, 1fr) repeat(2, 1.1fr);
+        grid-template: 10vh 70rem 10vh / repeat(2, 1fr) repeat(2, 1.1fr);
         overflow: hidden;
     }
     position: relative;
